@@ -2,9 +2,9 @@ package agenda;
 
 public class Contacto {
     private String nombre;
-    private String telefono;
     private String email;
-
+    private String telefono;
+    
     public Contacto(String nombre, String telefono, String email) {
         this.nombre = nombre;
         this.telefono = telefono;
@@ -37,6 +37,6 @@ public class Contacto {
 
     @Override
     public String toString() {
-        return "Nombre: " + nombre + ", Teléfono: " + telefono + ", Email: " + email;
+        return "Nombre: " + nombre + " | Teléfono: " + telefono + " | Correo: " + email;
     }
 }
