@@ -37,7 +37,7 @@ public class Main {
                     String email = scanner.nextLine();
 
                     Contacto nuevoContacto = new Contacto(nombre, telefono, email);
-                    miAgenda.agregarContacto(nuevoContacto);
+                    miAgenda.addContact(nuevoContacto);
 
                     System.out.println("Contacto agregado con éxito.");
                     break;
@@ -46,10 +46,10 @@ public class Main {
                     System.out.print("Nombre del contacto a eliminar: ");
                     String nombreEliminar = scanner.nextLine();
 
-                    Contacto contactoEliminar = miAgenda.buscarContactoPorNombre(nombreEliminar);
+                    Contacto contactoEliminar = miAgenda.searchContact(nombreEliminar);
 
-                    if (contactoEliminar != null) {
-                        miAgenda.eliminarContacto(contactoEliminar);
+                    if (contactoEliminar != null) {         // Si el contacto a eliminar no es un valor nulo, entonces que continúe
+                        miAgenda.deleteContact(contactoEliminar);
                         System.out.println("Contacto eliminado con éxito.");
                     } else {
                         System.out.println("Contacto no encontrado.");
@@ -60,7 +60,7 @@ public class Main {
                     System.out.print("Nombre del contacto a buscar: ");
                     String nombreBuscar = scanner.nextLine();
 
-                    Contacto contactoBuscar = miAgenda.buscarContactoPorNombre(nombreBuscar);
+                    Contacto contactoBuscar = miAgenda.searchContact(nombreBuscar);
 
                     if (contactoBuscar != null) {
                         System.out.println("Contacto encontrado:");
@@ -72,7 +72,7 @@ public class Main {
                 case 4:
                     // Mostrar todos los contactos
                     System.out.println("Todos los contactos:");
-                    miAgenda.mostrarTodosLosContactos();
+                    miAgenda.showContact();
                     break;
                 case 0:
                     // Salir del programa
