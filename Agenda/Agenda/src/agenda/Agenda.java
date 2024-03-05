@@ -14,7 +14,7 @@ public class Agenda {
     }
 
     public Contacto searchContact(String nombre) {
-        for (Contacto contacto : contactList) {                 // Esto es un bucle for-each que itera sobre cada elemento de contactList. En este caso, el tipo de elemento es Contacto,
+        for (Contacto contacto : contactList) {                 // Esto es un bucle for-each que itera sobre cada elemento de contactList. En este caso, el tipo de elemento es Contacto, de la clase Contacto.java,
             if (contacto.getNombre().equals(nombre)) {          // y el elemento (contacto) es una variable que tomará el valor de cada elemento en contactList en cada iteración. 
                 return contacto;
             }
