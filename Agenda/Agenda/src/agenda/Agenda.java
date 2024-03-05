@@ -3,31 +3,31 @@ package agenda;
 import java.util.ArrayList;
 
 public class Agenda {
-    private ArrayList<Contacto> listaContactos;
+    private ArrayList<Contacto> contactList;
 
     public Agenda() {
-        this.listaContactos = new ArrayList<>();
+        this.contactList = new ArrayList<>();
     }
 
-    public void agregarContacto(Contacto contacto) {
-        listaContactos.add(contacto);
+    public void addContact(Contacto contacto) {
+        contactList.add(contacto);
     }
 
-    public Contacto buscarContactoPorNombre(String nombre) {
-        for (Contacto contacto : listaContactos) {
-            if (contacto.getNombre().equals(nombre)) {
+    public Contacto searchContact(String nombre) {
+        for (Contacto contacto : contactList) {                 // Esto es un bucle for-each que itera sobre cada elemento de contactList. En este caso, el tipo de elemento es Contacto,
+            if (contacto.getNombre().equals(nombre)) {          // y el elemento (contacto) es una variable que tomará el valor de cada elemento en contactList en cada iteración. 
                 return contacto;
             }
         }
-        return null;
+        return null;        // Devuelve null si no se encuentra el contacto
     }
 
-    public void eliminarContacto(Contacto contacto) {
-        listaContactos.remove(contacto);
+    public void deleteContact(Contacto contacto) {
+        contactList.remove(contacto);
     }
 
-    public void mostrarTodosLosContactos() {
-        for (Contacto contacto : listaContactos) {
+    public void showContact() {
+        for (Contacto contacto : contactList) {
             System.out.println(contacto);
         }
     }
